@@ -25,7 +25,7 @@ function App() {
   }
 
   function getEngines(){
-    fetch("http://localhost:3080/models")
+    fetch("http://https://askme-slbu.onrender.com/models")
     .then(res => res.json())
     .then(data => {
       console.log(data.models.data)
@@ -47,7 +47,7 @@ function App() {
     // fetch response to the api combining the chat log array of messages and seinding it as a message to localhost:3000 as a post
     const messages = chatLogNew.map((message) => message.message).join("\n")
     
-    const response = await fetch("http://localhost:3080/", {
+    const response = await fetch("https://askme-slbu.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
