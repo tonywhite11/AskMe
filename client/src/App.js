@@ -25,7 +25,7 @@ function App() {
   }
 
   function getEngines(){
-    fetch("http://https://askme-slbu.onrender.com/models")
+    fetch("http://localhost:3080/models")
     .then(res => res.json())
     .then(data => {
       console.log(data.models.data)
